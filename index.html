@@ -60,6 +60,19 @@ function enterSite(){
 const video = document.querySelector('video');
 const bgMusic = document.getElementById('music');
 
+ if(video){
+ video.addEventListener('play', ()=>{
+  bgMusic.pause();
+ });
+
+ video.addEventListener('pause', ()=>{
+  bgMusic.play();
+ });
+
+ video.addEventListener('ended', ()=>{
+  bgMusic.play();
+ });
+
 }
 </script></body>
 </html>
