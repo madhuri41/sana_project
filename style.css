@@ -1,0 +1,156 @@
+body{
+font-family:'Segoe UI',Arial,sans-serif;
+background:linear-gradient(180deg,#fff,#ffe6f3);
+margin:0;
+}
+
+/* Intro Screen */
+#intro{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100vh;
+background:radial-gradient(circle at top,#ff7ac3,#9b5cff);
+color:white;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+z-index:1000;
+animation:fadeIn 1.5s ease;
+}
+
+#intro h1{
+font-size:44px;
+margin-bottom:10px;
+letter-spacing:1px;
+}
+
+#intro p{
+font-size:18px;
+opacity:0.9;
+margin-bottom:30px;
+}
+
+.enter-btn{
+padding:14px 30px;
+font-size:18px;
+border:none;
+border-radius:40px;
+background:white;
+color:#ff4fa3;
+cursor:pointer;
+font-weight:bold;
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
+transition:transform .2s,box-shadow .2s;
+}
+
+.enter-btn:hover{
+transform:scale(1.08);
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+.feed{
+max-width:500px;
+margin:auto;
+padding-bottom:40px;
+}
+
+.header{
+display:flex;
+align-items:center;
+padding:20px;
+background:white;
+border-radius:15px;
+margin:20px 10px;
+box-shadow:0 6px 15px rgba(0,0,0,0.08);
+}
+
+.profile-pic{
+width:70px;
+height:70px;
+border-radius:50%;
+object-fit:cover;
+margin-right:15px;
+border:3px solid #ff4fa3;
+}
+
+.username{
+font-weight:bold;
+font-size:20px;
+}
+
+.bio{
+font-size:14px;
+color:#777;
+}
+
+.post{
+background:white;
+margin:20px 10px;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 6px 15px rgba(0,0,0,0.08);
+transition:transform .2s;
+}
+
+.post:hover{
+transform:translateY(-4px);
+}
+
+.post img,video{
+width:100%;
+display:block;
+}
+
+.caption{
+padding:12px 14px;
+font-size:14px;
+color:#333;
+}
+
+.like{
+padding:12px 14px;
+font-size:22px;
+cursor:pointer;
+transition:transform .2s;
+}
+
+.like:hover{
+transform:scale(1.2);
+}
+
+button{
+display:block;
+margin:30px auto;
+padding:14px 26px;
+font-size:16px;
+background:linear-gradient(90deg,#ff4fa3,#9b5cff);
+color:white;
+border:none;
+border-radius:30px;
+cursor:pointer;
+box-shadow:0 6px 15px rgba(0,0,0,0.15);
+transition:transform .2s,box-shadow .2s;
+}
+
+button:hover{
+transform:scale(1.05);
+box-shadow:0 8px 18px rgba(0,0,0,0.25);
+}
+
+#surprise{
+display:none;
+text-align:center;
+padding:50px 20px;
+font-size:26px;
+color:#ff4fa3;
+animation:fadeIn 1s ease;
+}
+
+@keyframes fadeIn{
+from{opacity:0;transform:translateY(10px)}
+to{opacity:1;transform:translateY(0)}
+}

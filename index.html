@@ -1,0 +1,73 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Bhandavi</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body><!-- Intro Screen --><div id="intro">
+<h1>Happy Birthday 🎂</h1>
+<p>I made something special for you...</p>
+<button class="enter-btn" onclick="enterSite()">Enter Your Surprise 🎁</button>
+</div><audio id="music" loop>
+<source src="dheema.mpeg" type="audio/mpeg">
+</audio><div class="feed"><div class="header">
+<img src="profile.jpeg" class="profile-pic">
+<div>
+<div class="username">@lalam_bhandavi</div>
+<div class="bio">special one❤️ </div>
+</div>
+</div><div class="post">
+<img src="photo.jpeg">
+<div class="like" onclick="like(this)">❤️</div>
+<div class="caption">cutie</div>
+</div><div class="post">
+<img src="bhandavi.jpeg">
+<div class="like" onclick="like(this)">❤️</div>
+<div class="caption">sweety</div>
+</div><div class="post">
+<video controls>
+<source src="sweety.mp4" type="video/mp4">
+</video>
+<div class="caption"> my special one</div>
+</div><button onclick="showSurprise()">🎁 Tap for message</button>
+
+<div id="surprise">
+<P>Happy Birthday bhandavi 🎂
+<br><br>
+Thank you for all the memories, laughs, and crazy moments.thanks for coming into my life<br>stay happy 😊.. stay strong..
+<br>no matter whatever happens you will be always my special one 🫂💗..<br> <br>
+</P></div></div><script>
+function like(el){
+ el.style.color = el.style.color === 'red' ? 'black' : 'red';
+}
+
+function showSurprise(){
+ document.getElementById('surprise').style.display='block';
+ window.scrollTo(0,document.body.scrollHeight);
+}
+
+function enterSite(){
+ document.getElementById('intro').style.display='none';
+ document.getElementById('music').play();
+}
+ // Pause background music when video plays
+const video = document.querySelector('video');
+const bgMusic = document.getElementById('music');
+
+if(video){
+ video.addEventListener('play', ()=>{
+  bgMusic.pause();
+ });
+
+ video.addEventListener('pause', ()=>{
+  bgMusic.play();
+ });
+
+ video.addEventListener('ended', ()=>{
+  bgMusic.play();
+ });
+}
+</script></body>
+</html>
+
